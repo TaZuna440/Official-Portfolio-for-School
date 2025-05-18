@@ -1,0 +1,248 @@
+/* more html starts here !! */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body{
+    background: #14121d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* this is the header  */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+    
+.homeNavbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* transition lods */
+
+.homeNavbar a:hover,
+.homeNavbar a.homepageActive {
+    color: #8b9b91;
+}
+
+/* end of the navbar */
+
+/* Container for centered content */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 7rem auto;
+    padding: 0 15px;
+}
+  
+/* Contact section styling */
+
+.contact-section {
+    background-color: #14121d;
+    padding: 40px 0;
+}
+  
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #8b9b91;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px #8b9b91;
+}
+  
+.contact-form h2 {
+    text-align: center;
+    color: #14121d;
+    margin-bottom: 20px;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+  
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+  
+.btn {
+    display: inline-block;
+    background-color: #14121d;
+    color: whitesmoke;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+  
+.btn:hover {
+    background-color: #8b9b91;
+    color: #14121d;
+    box-shadow: 0 0 10px #8b9b91;
+}
+  
+  /* Footer Styling */
+footer {
+    margin-top: 272px;
+    background-color: #8b9b91;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 0 10px #8b9b91;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-form {
+      padding: 15px;
+    }
+  
+    .form-group input, .form-group textarea {
+      font-size: 14px;
+    }
+  
+    .btn {
+      font-size: 14px;
+    }
+}
+  
+@media (max-width: 480px) {
+    .contact-form {
+      padding: 10px;
+    }
+  
+    .form-group input, .form-group textarea {
+      font-size: 14px;
+    }
+  
+    .btn {
+      font-size: 14px;
+    }
+  }
+
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
